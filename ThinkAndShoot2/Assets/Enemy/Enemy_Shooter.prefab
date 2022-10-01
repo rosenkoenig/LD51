@@ -362,6 +362,8 @@ MonoBehaviour:
   m_animator: {fileID: 7793329317343731509}
   m_deathVfx: {fileID: 4751124390794764374, guid: a136a3a969f5d09419fcf77b7d5918a9,
     type: 3}
+  m_hitVfx: {fileID: 7172624839524067822, guid: 5def94c3d0bd48a4faedfecf2dd93864,
+    type: 3}
   projectile: {fileID: 837154728581409541, guid: cbd15b7e69a161147bc45978d73eb4d9,
     type: 3}
   shootFrequency: 3

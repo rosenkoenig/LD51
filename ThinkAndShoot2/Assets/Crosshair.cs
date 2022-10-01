@@ -8,10 +8,12 @@ public class Crosshair : MonoBehaviour
 
     public float maxOffset = 10f;
 
+    GameObject visual;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        visual = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -20,6 +22,11 @@ public class Crosshair : MonoBehaviour
         if(GameMaster.Instance.gameState == GameState.STARTED)
         {
             UpdateCrossHairItems();
+            visual.SetActive(GameMaster.Instance.gameLevel.playerModeHandler.currentMode == PlayerMode._FPS);
+        }
+        else
+        {
+            visual.SetActive(false);
         }
     }
 

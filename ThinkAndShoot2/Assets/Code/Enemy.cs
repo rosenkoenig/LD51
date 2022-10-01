@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public Animator m_animator;
 
     public GameObject m_deathVfx;
+    public GameObject m_hitVfx;
 
     protected virtual void Start()
     {
@@ -51,6 +52,10 @@ public class Enemy : MonoBehaviour
     protected virtual void OnDamaged (float damageTaken, GameObject damageSource)
     {
         m_animator.Play("ENEMY_Hit");
+        if (m_hitVfx)
+        {
+            Instantiate(m_hitVfx, transform.position + Vector3.up, transform.rotation);
+        }
     }
 
 
