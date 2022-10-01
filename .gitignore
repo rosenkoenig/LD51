@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-Swell/[Ll]ibrary/
-Swell/[Tt]emp/
-Swell/[Oo]bj/
-Swell/[Bb]uild/
-Swell/[Bb]uilds/
-Swell/[Ll]ogs/
-Swell/[Mm]emoryCaptures/
+ThinkAndShoot2/[Ll]ibrary/
+ThinkAndShoot2/[Tt]emp/
+ThinkAndShoot2/[Oo]bj/
+ThinkAndShoot2/[Bb]uild/
+ThinkAndShoot2/[Bb]uilds/
+ThinkAndShoot2/[Ll]ogs/
+ThinkAndShoot2/[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
