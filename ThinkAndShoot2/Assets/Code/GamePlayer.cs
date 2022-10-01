@@ -13,6 +13,7 @@ public class GamePlayer : AbstractCharacter
     protected Health m_Health;
     public Weapon weapon;
     GameMaster gameMaster;
+    UIMaster uiMaster;
     public float startChromaticAberrationValue = 0.262f;
     public float onHitChromaticAberrationAdd = 0.6f;
     public float startVignetteValue = 0.262f;
@@ -29,6 +30,7 @@ public class GamePlayer : AbstractCharacter
     {
         base.OnSpawn(gm);
         gameMaster = gm as GameMaster;
+        uiMaster = gm.uiMaster as UIMaster;
 
         gameMaster.onGameStarts += OnLevelStarts;
         gameMaster.gameLevel.playerModeHandler.onModeChanged += OnModeChanged;
@@ -60,6 +62,7 @@ public class GamePlayer : AbstractCharacter
     {
         Debug.Log("level starts");
         SetEnabled(true);
+        uiMaster.healthBar.UpdateHealth(Mathf.Max(0.05f, m_Health.GetRatio()));
     }
 
     void SetEnabled (bool _state)
@@ -91,6 +94,8 @@ public class GamePlayer : AbstractCharacter
         vignette.intensity.value += onHitVignetteAdd;
 
         LaunchShake();
+
+        uiMaster.healthBar.UpdateHealth(Mathf.Max(0.05f, m_Health.GetRatio()));
     }
 
     void OnDie ()
@@ -99,6 +104,8 @@ public class GamePlayer : AbstractCharacter
         m_Health.OnDie -= OnDie;
         SetEnabled(false);
         gameMaster.EndGame("death");
+
+        uiMaster.healthBar.UpdateHealth(0f);
     }
 
     void UpdateChromaticAberration ()

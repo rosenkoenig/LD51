@@ -48,4 +48,9 @@ public class PlayerModeHandler : MonoBehaviour
             onModeChanged(currentMode);
         }
     }
+
+    private void OnDestroy()
+    {
+        onModeChanged = null;
+    }
 }

@@ -57,8 +57,8 @@ MonoBehaviour:
   shootVFX: {fileID: 7791102003134783914, guid: 1c159eb201294e84d85ab5c42ef23b6d,
     type: 3}
   recoilFactor: 0
-  recoilAdd: 0.1
-  recoilRecoverySpeed: 0.1
+  recoilAdd: 0.15
+  recoilRecoverySpeed: 1
 --- !u!82 &6533782679610085003
 AudioSource:
   m_ObjectHideFlags: 0
