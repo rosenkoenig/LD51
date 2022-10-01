@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyClass
+{
+    Beamer,
+    Missiler
+}
+
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    protected Health m_Health;
+    public Health m_Health;
     public bool IsDead { get; private set; }
 
     public Animator m_animator;
 
     public GameObject m_deathVfx;
     public GameObject m_hitVfx;
+
+    public EnemyClass m_enemyClass;
 
     protected virtual void Start()
     {

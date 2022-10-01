@@ -661,6 +661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4775114323593535203}
   - component: {fileID: 4775114323593535200}
+  - component: {fileID: 3455117684722173472}
   - component: {fileID: 4775114323593535201}
   - component: {fileID: 4775114323593535202}
   - component: {fileID: 4775114323593535205}
@@ -680,8 +681,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4775114323593535214}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.8, z: 0}
+  m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -732,6 +733,29 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &3455117684722173472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4775114323593535214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8a8c2baf7f7444191475503ed5de30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameCamera: {fileID: 4775114323593535200}
+  _2D: 0
+  _3D: 1
+  mouse: 1
+  touch: 0
+  maxTouchCount: 10
+  hasToUpdate: 1
+  onlyFirstHit: 1
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 32
 --- !u!81 &4775114323593535201
 AudioListener:
   m_ObjectHideFlags: 0

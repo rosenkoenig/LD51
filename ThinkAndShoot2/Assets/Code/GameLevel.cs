@@ -28,6 +28,6 @@ public class GameLevel : AbstractLevel
     {
         base.StartLevel();
 
-        playerModeHandler.SetMode(PlayerMode._FPS);
+        playerModeHandler.SetMode(PlayerMode._TOP);
     }
 }

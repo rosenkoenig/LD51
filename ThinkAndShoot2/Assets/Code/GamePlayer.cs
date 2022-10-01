@@ -61,7 +61,7 @@ public class GamePlayer : AbstractCharacter
     void OnLevelStarts ()
     {
         Debug.Log("level starts");
-        SetEnabled(true);
+        //SetEnabled(true);
         uiMaster.healthBar.UpdateHealth(Mathf.Max(0.05f, m_Health.GetRatio()));
     }
 
