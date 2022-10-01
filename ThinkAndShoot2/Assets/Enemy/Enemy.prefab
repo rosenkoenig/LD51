@@ -82,7 +82,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 6021054868221179695}
-  m_hitVfx: {fileID: 0}
+  m_deathVfx: {fileID: 4751124390794764374, guid: a136a3a969f5d09419fcf77b7d5918a9,
+    type: 3}
 --- !u!114 &3962831693358678303
 MonoBehaviour:
   m_ObjectHideFlags: 0

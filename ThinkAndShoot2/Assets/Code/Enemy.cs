@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 
     public Animator m_animator;
 
-    public GameObject m_hitVfx;
+    public GameObject m_deathVfx;
 
     protected virtual void Start()
     {
@@ -42,9 +42,9 @@ public class Enemy : MonoBehaviour
     protected virtual void OnDie ()
     {
         IsDead = true;
-        if(m_hitVfx)
+        if(m_deathVfx)
         {
-            Instantiate(m_hitVfx, transform.position + Vector3.up, transform.rotation);
+            Instantiate(m_deathVfx, transform.position + Vector3.up, transform.rotation);
         }        
     }
 

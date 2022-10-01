@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52503bc929663a04293e1a82651c6ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ignoreY: 1
 --- !u!1001 &4587024218916169754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -359,7 +360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 7793329317343731509}
-  m_hitVfx: {fileID: 0}
+  m_deathVfx: {fileID: 4751124390794764374, guid: a136a3a969f5d09419fcf77b7d5918a9,
+    type: 3}
   projectile: {fileID: 837154728581409541, guid: cbd15b7e69a161147bc45978d73eb4d9,
     type: 3}
   shootFrequency: 3

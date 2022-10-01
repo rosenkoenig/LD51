@@ -68,6 +68,8 @@ public class Weapon : MonoBehaviour
 
     void UpdateShootHotspot ()
     {
+        recoilFactor = Mathf.Clamp01(recoilFactor);
+
         currentHotspotPosition = Vector3.Lerp(immobileHotspot.position, shootHotspot.position, recoilFactor);
         currentHotspotRotation = Quaternion.Lerp(immobileHotspot.rotation, shootHotspot.rotation, recoilFactor);
 

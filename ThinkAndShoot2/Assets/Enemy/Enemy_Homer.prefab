@@ -760,7 +760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_animator: {fileID: 7793329317343731509}
-  m_hitVfx: {fileID: 0}
+  m_deathVfx: {fileID: 4751124390794764374, guid: a136a3a969f5d09419fcf77b7d5918a9,
+    type: 3}
   projectile: {fileID: 837154728581409541, guid: 84ebd78c521eb4a4daf7e6165317d2e1,
     type: 3}
   shootFrequency: 3
