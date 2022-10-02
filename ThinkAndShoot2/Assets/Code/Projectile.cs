@@ -94,7 +94,7 @@ public class Projectile : MonoBehaviour
     void OnCollide (Collider other, Vector3 normal)
     {
         Damageable dmg = other.gameObject.GetComponentInParent<Damageable>();
-        if (dmg)
+        if (dmg && dmg.CanTakeDamage())
         {
             dmg.InflictDamage(damage, false, owner);
             Instantiate(hitEnemyVfx, transform.position, transform.rotation);

@@ -79,7 +79,7 @@ public class GamePlayer : AbstractCharacter
         playerInputHandler.enabled = _state;
         playerCharacterController.enabled = _state;
         characterController.enabled = _state;
-        weapon.enabled = _state;
+        weapon.SetEnabled(_state);
     }
 
     void OnModeChanged (PlayerMode mode)
@@ -110,9 +110,9 @@ public class GamePlayer : AbstractCharacter
 
     void UpdateChromaticAberration ()
     {
-        float value = Mathf.Lerp(chromaticAberration.intensity.value, startChromaticAberrationValue, chromaticFalloffSmooth);
-        chromaticAberration.intensity.value = value;
-        value = Mathf.Lerp(vignette.intensity.value, startVignetteValue, vignetteFalloffSmooth);
+        //float value = Mathf.Lerp(chromaticAberration.intensity.value, startChromaticAberrationValue, chromaticFalloffSmooth);
+        //chromaticAberration.intensity.value = value;
+        float value = Mathf.Lerp(vignette.intensity.value, startVignetteValue, vignetteFalloffSmooth);
         vignette.intensity.value = value;
     }
     void LaunchShake()

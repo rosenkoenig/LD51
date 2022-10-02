@@ -28,6 +28,8 @@ public class Enemy : MonoBehaviour
 
         m_Health.OnDie += OnDie;
         m_Health.OnDamaged += OnDamaged;
+
+        GameMaster.Instance.gameLevel.levelEnemies.Add(this);
     }
 
     // Update is called once per frame

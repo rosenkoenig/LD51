@@ -10,6 +10,8 @@ public class UIMaster : AbstractUIMaster
 
     public EnemyUI enemyUI;
 
+    public StartMenu startMenu;
+
     public void DisplayGameOver ()
     {
         gameOverMenu.SetActive(true);
@@ -24,5 +26,18 @@ public class UIMaster : AbstractUIMaster
     public void HideEnemyUI()
     {
         enemyUI.gameObject.SetActive(false);
+    }
+
+    protected override void OnGameLaunched()
+    {
+        base.OnGameLaunched();
+
+        startMenu.gameObject.SetActive(true);
+    }
+
+    protected override void OnGameStart()
+    {
+        base.OnGameStart();
+        startMenu.gameObject.SetActive(false);
     }
 }

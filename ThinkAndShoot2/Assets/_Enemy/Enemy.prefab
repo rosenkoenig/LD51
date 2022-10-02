@@ -82,10 +82,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 080456b20d705f94aaa6a53f964fe4b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Health: {fileID: 0}
   m_animator: {fileID: 6021054868221179695}
   m_deathVfx: {fileID: 4751124390794764374, guid: a136a3a969f5d09419fcf77b7d5918a9,
     type: 3}
   m_hitVfx: {fileID: 0}
+  m_enemyClass: 0
 --- !u!114 &3962831693358678303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +116,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageMultiplier: 1
   SensibilityToSelfdamage: 0.5
+  m_shielders: []
+  m_shieldSign: {fileID: 8838173290402385927, guid: fab46c5ea7ac22a408503a54e14d8555,
+    type: 3}
 --- !u!95 &6021054868221179695
 Animator:
   serializedVersion: 4

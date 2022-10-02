@@ -7,6 +7,8 @@ public class GameLevel : AbstractLevel
     public PlayerModeHandler playerModeHandler;
     public Cinemachine.CinemachineVirtualCamera levelTopCam;
 
+    public List<Enemy> levelEnemies;
+
     public override string GetLevelName()
     {
         return "";
@@ -15,7 +17,7 @@ public class GameLevel : AbstractLevel
     // Start is called before the first frame update
     void Start()
     {
-        
+        levelEnemies = new List<Enemy>();
     }
 
     // Update is called once per frame

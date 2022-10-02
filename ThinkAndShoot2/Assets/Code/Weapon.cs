@@ -75,4 +75,10 @@ public class Weapon : MonoBehaviour
 
         recoilFactor = Mathf.Lerp(recoilFactor, 0f, recoilRecoverySpeed * Time.deltaTime);
     }
+
+    public void SetEnabled (bool _state)
+    {
+        enabled = _state;
+        transform.GetChild(0).gameObject.SetActive(_state);
+    }
 }
