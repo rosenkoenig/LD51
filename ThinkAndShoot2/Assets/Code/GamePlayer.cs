@@ -58,16 +58,16 @@ public class GamePlayer : AbstractCharacter
         UpdateChromaticAberration();
     }
 
-    void OnLevelStarts ()
+    void OnLevelStarts()
     {
         Debug.Log("level starts");
         //SetEnabled(true);
         uiMaster.healthBar.UpdateHealth(Mathf.Max(0.05f, m_Health.GetRatio()));
     }
 
-    void SetEnabled (bool _state)
+    void SetEnabled(bool _state)
     {
-        if(_state)
+        if (_state)
         {
             playerInputHandler.Enable();
         }
@@ -82,23 +82,23 @@ public class GamePlayer : AbstractCharacter
         weapon.SetEnabled(_state);
     }
 
-    void OnModeChanged (PlayerMode mode)
+    void OnModeChanged(PlayerMode mode)
     {
         SetEnabled(mode == PlayerMode._FPS);
     }
 
-    void OnDamaged (float damageTaken, GameObject damageSource)
+    void OnDamaged(float damageTaken, GameObject damageSource)
     {
         Debug.Log("damaged!");
-        chromaticAberration.intensity.value += onHitChromaticAberrationAdd;
-        vignette.intensity.value += onHitVignetteAdd;
+        //chromaticAberration.intensity.value += onHitChromaticAberrationAdd;
+        //vignette.intensity.value += onHitVignetteAdd;
 
         LaunchShake();
 
         uiMaster.healthBar.UpdateHealth(Mathf.Max(0.05f, m_Health.GetRatio()));
     }
 
-    void OnDie ()
+    void OnDie()
     {
         m_Health.OnDamaged -= OnDamaged;
         m_Health.OnDie -= OnDie;
@@ -108,11 +108,11 @@ public class GamePlayer : AbstractCharacter
         uiMaster.healthBar.UpdateHealth(0f);
     }
 
-    void UpdateChromaticAberration ()
+    void UpdateChromaticAberration()
     {
-        //float value = Mathf.Lerp(chromaticAberration.intensity.value, startChromaticAberrationValue, chromaticFalloffSmooth);
-        //chromaticAberration.intensity.value = value;
-        float value = Mathf.Lerp(vignette.intensity.value, startVignetteValue, vignetteFalloffSmooth);
+        float value = Mathf.Lerp(startChromaticAberrationValue, 1f, 1f - m_Health.GetRatio());
+        chromaticAberration.intensity.value = value;
+        value = Mathf.Lerp(startVignetteValue, 1f, 1f - m_Health.GetRatio());
         vignette.intensity.value = value;
     }
     void LaunchShake()

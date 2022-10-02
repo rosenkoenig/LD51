@@ -16,6 +16,12 @@ public class EnemyHoverer : AbsstractButtonMouseInteractible
     {
         base.OnMouseIn();
 
+        if(!enemy)
+        {
+            Debug.LogError("Enemy is null", this);
+            return;
+        }
+
         ui.DisplayEnemyUI(enemy.GetComponent<Enemy>());
     }
 

@@ -117,7 +117,10 @@ MonoBehaviour:
   DamageMultiplier: 1
   SensibilityToSelfdamage: 0.5
   m_shielders: []
+  m_shieldersLines: []
   m_shieldSign: {fileID: 8838173290402385927, guid: fab46c5ea7ac22a408503a54e14d8555,
+    type: 3}
+  m_shielderLinePrefab: {fileID: 720741633727153348, guid: 0783731f3d7220e4fb917276efdd05f5,
     type: 3}
 --- !u!95 &6021054868221179695
 Animator:

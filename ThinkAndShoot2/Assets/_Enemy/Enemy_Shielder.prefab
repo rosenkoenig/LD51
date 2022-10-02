@@ -486,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20782dce38442444b9ce33876827a076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_maxRange: 100
+  m_maxRange: 15
   m_maxEnemies: 3
   m_protectedAllies: []
 --- !u!4 &5655009158257167581 stripped

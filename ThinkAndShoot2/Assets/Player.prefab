@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 4775114322667122573}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,15 +216,15 @@ MonoBehaviour:
   characterController: {fileID: 4775114322667122572}
   weapon: {fileID: 4775114321921408518}
   startChromaticAberrationValue: 0.262
-  onHitChromaticAberrationAdd: 0.6
-  startVignetteValue: 0.262
+  onHitChromaticAberrationAdd: 0.2
+  startVignetteValue: 0.3
   onHitVignetteAdd: 0.2
   chromaticFalloffSmooth: 0.1
   vignetteFalloffSmooth: 0.3
   onHitShake:
-    smoothFactor: 0.8
-    duration: 0.5
-    shakesPerSec: {x: 10, y: 10, z: 0}
+    smoothFactor: 0.4
+    duration: 1
+    shakesPerSec: {x: 5, y: 5, z: 0}
     startAmplitudes: {x: 1, y: 1, z: 0}
     endAmplitudes: {x: 0, y: 0, z: 0}
     ignoreTimeScale: 0
@@ -300,7 +300,9 @@ MonoBehaviour:
   DamageMultiplier: 1
   SensibilityToSelfdamage: 0.5
   m_shielders: []
+  m_shieldersLines: []
   m_shieldSign: {fileID: 0}
+  m_shielderLinePrefab: {fileID: 0}
 --- !u!114 &4775114322667122575
 MonoBehaviour:
   m_ObjectHideFlags: 0

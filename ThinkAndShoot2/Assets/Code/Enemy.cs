@@ -58,7 +58,10 @@ public class Enemy : MonoBehaviour
         if(m_deathVfx)
         {
             Instantiate(m_deathVfx, transform.position + Vector3.up, transform.rotation);
-        }        
+        }
+
+
+        GameMaster.Instance.gameLevel.levelEnemies.Remove(this);
     }
 
     protected virtual void OnDamaged (float damageTaken, GameObject damageSource)

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Image gauge;
+    public Image m_gauge;
+    public Animator m_animator;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class HealthBar : MonoBehaviour
 
     public void UpdateHealth (float ratio)
     {
-        gauge.transform.localScale = new Vector3(ratio, 1f, 1f);
+        m_animator.Play("HEALTHBAR_Hit");
+        m_gauge.transform.localScale = new Vector3(ratio, 1f, 1f);
     }
 }

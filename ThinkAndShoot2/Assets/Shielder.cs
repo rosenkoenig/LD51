@@ -27,7 +27,9 @@ public class Shielder : MonoBehaviour
     void UpdateAllies()
     {
         List<Enemy> allies = new List<Enemy>(GameMaster.Instance.gameLevel.levelEnemies);
+
         allies.Remove(m_owner);
+        allies.RemoveAll(x => x.m_enemyClass == EnemyClass.Shielder);
 
         List<Enemy> sortedAllies = new List<Enemy>();
 
