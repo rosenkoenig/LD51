@@ -5,7 +5,9 @@ using UnityEngine;
 public enum EnemyClass
 {
     Beamer,
-    Missiler
+    Missiler,
+    Shielder,
+    Digger
 }
 
 public class Enemy : MonoBehaviour

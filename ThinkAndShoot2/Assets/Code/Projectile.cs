@@ -85,7 +85,7 @@ public class Projectile : MonoBehaviour
             {
                 debug = "" + other.gameObject;
             }
-            Debug.Log(debug + " hit by " + owner);
+
             OnCollide(other, -transform.forward);
         }
     }

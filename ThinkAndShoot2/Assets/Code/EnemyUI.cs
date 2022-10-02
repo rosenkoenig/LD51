@@ -22,7 +22,7 @@ public class EnemyUI : MonoBehaviour
         if (m_myEnemy && GameMaster.Instance.gameLevel.playerModeHandler.currentMode == PlayerMode._TOP)
         {
             Vector2 myPositionOnScreen = Camera.main.WorldToScreenPoint(m_myEnemy.transform.position);
-            Debug.Log(m_myEnemy.gameObject.name + " - " + myPositionOnScreen);
+
             Canvas copyOfMainCanvas = GameObject.Find("Canvas").GetComponent<Canvas>();
             float scaleFactor = copyOfMainCanvas.scaleFactor;
             Vector2 finalPosition = new Vector2(myPositionOnScreen.x / scaleFactor, myPositionOnScreen.y / scaleFactor);

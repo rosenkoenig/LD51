@@ -18,7 +18,7 @@ public class PlayerModeHandler : MonoBehaviour
 
     public void UpdatePlayerModeTimer()
     {
-        timer += Time.deltaTime;
+        timer += Time.unscaledDeltaTime;
         if(timer >= 10f)
         {
             PlayerMode newMode = PlayerMode._FPS;
@@ -46,6 +46,15 @@ public class PlayerModeHandler : MonoBehaviour
         if (onModeChanged != null)
         {
             onModeChanged(currentMode);
+        }
+
+        if(currentMode == PlayerMode._TOP)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
         }
     }
 
