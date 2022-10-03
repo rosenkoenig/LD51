@@ -9,6 +9,7 @@ public class UIMaster : AbstractUIMaster
     public HealthBar healthBar;
 
     public EnemyUI enemyUI;
+    public CollectibleUI collectibleUI;
 
     public StartMenu startMenu;
 
@@ -26,6 +27,17 @@ public class UIMaster : AbstractUIMaster
     public void HideEnemyUI()
     {
         enemyUI.gameObject.SetActive(false);
+    }
+
+    public void DisplayCollectibleUI(SimpleCollectibleScript collectible)
+    {
+        collectibleUI.m_collectible = collectible;
+        collectibleUI.gameObject.SetActive(true);
+    }
+
+    public void HideCollectibleUI()
+    {
+        collectibleUI.gameObject.SetActive(false);
     }
 
     protected override void OnGameLaunched()

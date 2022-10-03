@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
 
     public EnemyClass m_enemyClass;
 
+    public int m_scoreValue = 10;
+
     protected virtual void Start()
     {
         m_Health = GetComponent<Health>();
@@ -60,8 +62,8 @@ public class Enemy : MonoBehaviour
             Instantiate(m_deathVfx, transform.position + Vector3.up, transform.rotation);
         }
 
-
         GameMaster.Instance.gameLevel.levelEnemies.Remove(this);
+        GameMaster.Instance.ScoreManager.AddToScore(m_scoreValue);
     }
 
     protected virtual void OnDamaged (float damageTaken, GameObject damageSource)

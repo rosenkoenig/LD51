@@ -6,6 +6,8 @@ public class GameMaster : AbstractGameMaster
 {
     public static GameMaster Instance;
 
+    public ScoreManager ScoreManager;
+
     public GameLevel gameLevel
     {
         get
