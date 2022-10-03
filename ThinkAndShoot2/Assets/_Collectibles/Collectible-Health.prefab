@@ -251,6 +251,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114352366165809370, guid: 59c7078d344dfe94f97e849fe4f0dce0,
         type: 3}
+      propertyPath: value
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114352366165809370, guid: 59c7078d344dfe94f97e849fe4f0dce0,
+        type: 3}
       propertyPath: rotate
       value: 0
       objectReference: {fileID: 0}

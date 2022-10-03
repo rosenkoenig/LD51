@@ -17,6 +17,8 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	public GameObject collectEffect;
 
+	public float value;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -55,7 +57,7 @@ public class SimpleCollectibleScript : MonoBehaviour {
 		if (CollectibleType == CollectibleTypes.Health) {
 
 			//Add in code here;
-			other.GetComponent<Health>().Heal(3f);
+			other.GetComponent<Health>().Heal(value);
 		}
 		if (CollectibleType == CollectibleTypes.Type2) {
 
