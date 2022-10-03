@@ -34,7 +34,6 @@ public static class LDTools
         }
 
         Selection.objects = null;
-        Selection.activeObject = newParent;
 
         //PrefabUtility.SaveAsPrefabAsset(newParent, "Assets/_Enemy/Groups/" + newParent.name + ".prefab");
     }

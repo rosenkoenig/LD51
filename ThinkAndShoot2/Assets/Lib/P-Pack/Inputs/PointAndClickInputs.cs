@@ -170,7 +170,7 @@ public class PointAndClickInputs : MonoBehaviour
             }
             else
             {
-                if (lastRaycastHits[i].raycastHit3D.collider.gameObject == go && inputNameMatches) return true;
+                if (lastRaycastHits[i].raycastHit3D.collider && lastRaycastHits[i].raycastHit3D.collider.gameObject == go && inputNameMatches) return true;
             }
         }
 

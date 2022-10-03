@@ -4632,6 +4632,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1786295605}
     m_Modifications:
+    - target: {fileID: 2798772814773437525, guid: 4457e56e924b421478cfc5b92e7dcd65,
+        type: 3}
+      propertyPath: m_xPosRange.x
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862867751628049738, guid: 4457e56e924b421478cfc5b92e7dcd65,
+        type: 3}
+      propertyPath: levelChapters.Array.data[0].spawnFrequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862867751628049738, guid: 4457e56e924b421478cfc5b92e7dcd65,
+        type: 3}
+      propertyPath: levelChapters.Array.data[1].spawnFrequency
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862867751628049738, guid: 4457e56e924b421478cfc5b92e7dcd65,
+        type: 3}
+      propertyPath: levelChapters.Array.data[3].spawnFrequency
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862867751628049738, guid: 4457e56e924b421478cfc5b92e7dcd65,
+        type: 3}
+      propertyPath: levelChapters.Array.data[4].spawnFrequency
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862867751628049738, guid: 4457e56e924b421478cfc5b92e7dcd65,
+        type: 3}
+      propertyPath: levelChapters.Array.data[0].keepSpawningAfterEnd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2862867751628049738, guid: 4457e56e924b421478cfc5b92e7dcd65,
+        type: 3}
+      propertyPath: levelChapters.Array.data[1].keepSpawningAfterEnd
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3586364706552927222, guid: 4457e56e924b421478cfc5b92e7dcd65,
         type: 3}
       propertyPath: m_Name
