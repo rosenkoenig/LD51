@@ -4,17 +4,20 @@ using UnityEngine;
 
 public enum PlayerMode
 {
+    _NONE,
     _FPS,
     _TOP
 }
 
 public class PlayerModeHandler : MonoBehaviour
 {
-    public PlayerMode currentMode = PlayerMode._TOP;
+    public PlayerMode currentMode = PlayerMode._NONE;
 
     public System.Action<PlayerMode> onModeChanged;
     
     public float timer = 0f;
+
+    public MusicManager musicManager;
 
     public void UpdatePlayerModeTimer()
     {
@@ -45,6 +48,7 @@ public class PlayerModeHandler : MonoBehaviour
 
         if (onModeChanged != null)
         {
+            musicManager.OnModeChanged(currentMode);
             onModeChanged(currentMode);
         }
 

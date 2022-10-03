@@ -13,19 +13,9 @@ public class MusicManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameMaster.Instance.onGameStarts += OnLevelStarts;
     }
 
-    void OnLevelStarts ()
-    {
-        if (GameMaster.Instance.gameLevel.playerModeHandler.onModeChanged != null)
-        {
-            GameMaster.Instance.gameLevel.playerModeHandler.onModeChanged -= OnModeChanged;
-        }
-        GameMaster.Instance.gameLevel.playerModeHandler.onModeChanged += OnModeChanged;
-    }
-
-    void OnModeChanged(PlayerMode newMode)
+    public void OnModeChanged(PlayerMode newMode)
     {
         Debug.Log("music change");
 

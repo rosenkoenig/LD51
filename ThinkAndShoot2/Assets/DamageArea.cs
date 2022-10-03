@@ -28,19 +28,10 @@ public class DamageArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Enemy enemy = other.GetComponentInParent<Enemy>();
-        if ((enemy == null || enemy.gameObject != owner) && other.gameObject != owner)
+        Debug.Log("contact with "+ other.gameObject.name);
+        if (other.tag == "Player")
         {
-            string debug = "";
-            if (enemy != null)
-            {
-                debug = "" + enemy.gameObject;
-            }
-            else
-            {
-                debug = "" + other.gameObject;
-            }
-            Debug.Log(debug + " hit by " + owner);
+            Debug.Log(other.gameObject + " hit by " + owner);
             OnCollide(other, Vector3.up);
         }
     }

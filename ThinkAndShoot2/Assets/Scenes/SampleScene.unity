@@ -3260,7 +3260,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2109635303}
   - component: {fileID: 2109635302}
-  - component: {fileID: 2109635304}
   m_Layer: 0
   m_Name: _SYSTEM
   m_TagString: Untagged
@@ -3302,24 +3301,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2109635304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2109635301}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 043b816f69276914e9b3c8081774fc59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpsSnapshot: {fileID: 8912329160705781252, guid: 2bf038b4b2d8baa40bd0327ed249fa4f,
-    type: 2}
-  topSnapshot: {fileID: 2869230729516121654, guid: 2bf038b4b2d8baa40bd0327ed249fa4f,
-    type: 2}
-  fpsToTopTransitionDuration: 0.2
-  topToFpsTransitionDuration: 0.2
 --- !u!1001 &4775114323265080105
 PrefabInstance:
   m_ObjectHideFlags: 0

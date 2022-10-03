@@ -84,6 +84,7 @@ public class GamePlayer : AbstractCharacter
 
     void OnModeChanged(PlayerMode mode)
     {
+        Debug.Log("cahange mode player");
         SetEnabled(mode == PlayerMode._FPS);
     }
 

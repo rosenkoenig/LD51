@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class GameLevel : AbstractLevel
 {
+    public PlayerMode startMode = PlayerMode._FPS;
     public PlayerModeHandler playerModeHandler;
     public Cinemachine.CinemachineVirtualCamera levelTopCam;
 
     public List<Enemy> levelEnemies;
+
+    public EnemyGroupsSpawner m_groupsSpawner;
 
     public override string GetLevelName()
     {
@@ -23,13 +26,18 @@ public class GameLevel : AbstractLevel
     // Update is called once per frame
     void Update()
     {
-        playerModeHandler.UpdatePlayerModeTimer();
+        if(displayed)
+        {
+            playerModeHandler.UpdatePlayerModeTimer();
+            m_groupsSpawner.UpdateChapters();
+        }
     }
 
     public override void StartLevel()
     {
         base.StartLevel();
 
-        playerModeHandler.SetMode(PlayerMode._TOP);
+        playerModeHandler.SetMode(PlayerMode._FPS);
+        m_groupsSpawner.OnLevelStarts();
     }
 }

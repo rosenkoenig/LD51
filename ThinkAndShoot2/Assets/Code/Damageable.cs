@@ -33,7 +33,7 @@ public class Damageable : MonoBehaviour
 
     void UpdateShield ()
     {
-        for (int i = 0; i < m_shielders.Count; i++)
+        for (int i = m_shielders.Count - 1; i >= 0; i--)
         {
             if(m_shielders[i] == null)
             {
